@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@600;800&family=Lexend:wght@700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #164B65;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+
+h1 {
+    color: #CBB0A7;
+    font-size: 15pt;
+    font-family: 'Lexend';
+    font-weight: 800;
+    position: absolute;
+    left: 100px;
+    top: 0;
+    line-height: 80px;
+}
+
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+}
+
+header li {
+    display: inline;
+    margin-right: 1vw;
+    font-family: "Karla";
+    font-size: 12pt;
+}
+
+header a {
+    color: #9DBFD1;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.news {
+    background-color: beige;
+    color: white;
+    height: 100vh;
+    background-image: url("images/DSCF0715.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.news a {
+    color: white;
+    font-size: 12pt;
+    text-decoration: none;
+    border: 0.5px solid white;
+    padding: 8px 8px;
+    border-radius: 8px;
+}
+
+.news h2 {
+    color: white;
+    font-size: 55pt;
+    font-family: "Karla";
+    font-weight: 700;
+    margin-top: 60px;
+}
+
+.news p {
+    color: white;
+    font-size: 15pt;
+    font-family: "Karla";
+    margin: 25px 0;
+}
+
+.view {
+    display: flex;
+    background-color: #CBB0A7;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 100px 70px;
+}
+
+.view div {
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.view img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.menu {
+    display: none;
+}
+
+footer {
+    background-color: #CBB0A7;
+    color: white;
+}
+
+/* 響應式設計語法 */
+@media screen and (max-width: 768px) {
+    header ul {
+        display: none;
+    }
+
+    header h1 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .news h2 {
+        font-size: 40px;
+    }
+
+    .menu {
+        display: block;
+        background-color: transparent;
+        color: white;
+        font-size: 35px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .view {
+        flex-direction: column;
+        padding: 60px 0;
+    }
+
+    .view div {
+        margin-bottom: 30px;
+    }
+}
